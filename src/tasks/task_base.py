@@ -28,11 +28,13 @@ class Task(object):
         output_fname_base,
         use_fmri=False,
         use_meg=False,
+        use_eeg=False
     ):
         self.output_path = output_path
         self.output_fname_base = output_fname_base
         self.use_fmri = use_fmri
         self.use_meg = use_meg
+        self.use_eeg = use_eeg
         self._events = []
 
         self._exp_win_first_flip_time = None

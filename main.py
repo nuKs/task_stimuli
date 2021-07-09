@@ -33,6 +33,7 @@ def run(parsed):
             parsed.output,
             parsed.eyetracking,
             parsed.fmri,
+            parsed.eeg,
             parsed.meg,
             parsed.ctl_win,
             parsed.run_on_battery,

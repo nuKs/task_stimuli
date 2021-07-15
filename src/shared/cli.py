@@ -65,8 +65,8 @@ def run_task(
     if eyetracker and not shortcut_evt and task.use_eyetracking:
         eyetracker.start_recording(task.name)
     # send start trigger/marker to MEG + Biopac (or anything else on parallel port)
-    if task.use_meg and not shortcut_evt:
-        meg.send_signal(meg.MEG_settings["TASK_START_CODE"])
+    # if task.use_meg and not shortcut_evt:
+    #    meg.send_signal(meg.MEG_settings["TASK_START_CODE"])
 
     if task.use_eeg and not shortcut_evt:
         eeg.send_spike()
@@ -80,8 +80,8 @@ def run_task(
         )
 
     # send stop trigger/marker to MEG + Biopac (or anything else on parallel port)
-    if task.use_meg and not shortcut_evt:
-        meg.send_signal(meg.MEG_settings["TASK_STOP_CODE"])
+    #if task.use_meg and not shortcut_evt:
+    #    meg.send_signal(meg.MEG_settings["TASK_STOP_CODE"])
 
     if task.use_eeg and not shortcut_evt:
         eeg.send_spike()
@@ -109,8 +109,8 @@ def main_loop(
     output_ds,
     enable_eyetracker=False,
     use_fmri=False,
-    use_meg=False,
     use_eeg=False,
+    use_meg=False,
     show_ctl_win=False,
     allow_run_on_battery=False,
     enable_ptt=False,

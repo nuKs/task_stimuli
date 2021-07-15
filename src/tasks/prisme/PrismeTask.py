@@ -30,7 +30,7 @@ class PrismeTask(Task):
         patientImageSetup = data.importConditions(patientImageSetupPath)
         runImageSetup = [
             currImageObj for currImageObj in patientImageSetup
-            if currImageObj['run'] == runIdx and currImageObj['type'] == 'fmri'
+            if currImageObj['run'] == runIdx and currImageObj['type'] == 'eeg'
         ]
         
         # Ensure image exists.
